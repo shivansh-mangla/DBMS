@@ -1,0 +1,77 @@
+Create table Student( 
+    Rno number(15) PRIMARY KEY,  
+    Name varchar(50), 
+    DOB date,  
+    Gender varchar(10), 
+    Class int, 
+    College varchar(100),  
+	City varchar(50), 
+    Marks int 
+);
+
+INSERT INTO Student(Rno, Name, DOB, Gender, Class, College, City, Marks) 
+VALUES(102203018 , 'Nishant' , TO_DATE('2004-11-06', 'YYYY-MM-DD') , 'Male' , 2 , 'Thapar' , 'Noida' , 100);
+
+SELECT * FROM Student;
+
+DELETE FROM Student WHERE Rno = 102203018;
+
+INSERT INTO Student(Rno, Name, DOB, Gender, Class, College, City, Marks) 
+VALUES (102203018, 'Nishant', TO_DATE('2004-11-06', 'YYYY-MM-DD'), 'Male', 2, 'Thapar', 'Noida', 100);
+
+INSERT INTO Student(Rno, Name, DOB, Gender, Class, College, City, Marks) 
+VALUES (102203324, 'Shivansh', TO_DATE('2003-05-24', 'YYYY-MM-DD'), 'Male', 2, 'Thapar', 'Delhi', 55);
+
+INSERT INTO Student(Rno, Name, DOB, Gender, Class, College, City, Marks) 
+VALUES (102203700, 'Avisek', TO_DATE('2003-11-24', 'YYYY-MM-DD'), 'Male', 2, 'Thapar', 'Kolkata', 90);
+
+INSERT INTO Student(Rno, Name, DOB, Gender, Class, College, City, Marks) 
+VALUES (102203770, 'Sarabjeet', TO_DATE('2004-07-18', 'YYYY-MM-DD'), 'Male', 2, 'Thapar', 'Ludhiana', 100);
+
+INSERT INTO Student(Rno, Name, DOB, Gender, Class, College, City, Marks) 
+VALUES (102203792, 'Rajat', TO_DATE('2004-02-01', 'YYYY-MM-DD'), 'Male', 2, 'Thapar', 'Ferozpur', 100);
+
+INSERT INTO Student(Rno, Name, DOB, Gender, Class, College, City, Marks) 
+VALUES (102383071, 'Yash', TO_DATE('2004-06-02', 'YYYY-MM-DD'), 'Male', 2, 'Thapar', 'Gurugram', 100);
+
+INSERT INTO Student(Rno, Name, DOB, Gender, Class, College, City, Marks) 
+VALUES (102383071, 'Sneha', TO_DATE('2004-06-02', 'YYYY-MM-DD'), 'Female', 3, 'IITB', 'Gurugram', 100);
+
+INSERT INTO Student(Rno, Name, DOB, Gender, Class, College, City, Marks) 
+VALUES (102203552, 'Achintya', TO_DATE('2004-06-08', 'YYYY-MM-DD'), 'Male', 2, 'Thapar', 'Aligarh', 100);
+
+
+SELECT * FROM Student;
+
+
+DESCRIBE Student;
+
+SELECT * FROM Student
+;
+
+SELECT Rno, Name, Class, College, City FROM Student WHERE City = 'Gurugram'
+;
+
+SELECT * FROM Student
+;
+
+SELECT * FROM Student ORDER BY Marks ASC , Name DESC
+;
+
+UPDATE Student 
+SET Marks = 89  
+WHERE Rno = 102383072
+;
+
+-- ALTER TABLE Student
+-- RENAME COLUMN Class TO Year;
+
+-- ALTER TABLE Student
+-- ADD Cgpa NUMBER NULL;
+
+-- ALTER TABLE Student
+-- MODIFY Marks NUMBER;
+
+SELECT * FROM Student;
+
+drop table Student;

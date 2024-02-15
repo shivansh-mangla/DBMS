@@ -1,0 +1,43 @@
+SELECT chr(100) AS result FROM dual;
+--chr (n)
+--converts 100 from ASCII to charecter
+
+SELECT concat('Avni is ', ' very buri') AS result FROM dual;
+--concatinates the 2 strings
+--concat(string1,string2)
+
+SELECT instr('Mera naam shivansh,avisek,yash hai', 'shivansh') AS result FROM dual;
+--returns the position of character first appearing
+--instr(string,char)
+
+SELECT length('Shivansh') AS result FROM dual;
+--shows length of string
+
+SELECT lpad('Hello', 10, '*') AS result FROM dual;
+--lpad(string, n ,char): Pads the left side of string with a specific character (or space) until the string is of a specified length n.
+--This will return 'Hello' as the result because the length of 'Hello' is 5, and it pads the left side with '' until the total length is 10.
+
+
+SELECT ltrim('    Hello there') AS result FROM dual;
+
+SELECT rpad('Hello', 10, '*') AS result FROM dual;
+
+SELECT rtrim('Hello    ') AS result FROM dual;
+
+SELECT replace('Hello World', 'World', 'Avisek') AS result FROM dual;
+--replace(char, search_string, replacement_string): Replaces all occurrences of a specified substring with another substring in a given string.
+
+SELECT substr('mera naam shivansh hai yaar', 7, 10) AS result FROM dual;
+--substr(string, position, substring length): Returns a portion of a string starting from a specified position with a specified length.
+
+
+SELECT initcap('hello Nishant') AS result FROM dual;
+--initcap(char): Capitalizes the first letter of each word in a string.
+
+SELECT lower('SHIVANSH hoo me') AS result FROM dual;
+
+SELECT upper('SHIVANSH hoo me') AS result FROM dual;
+
+SELECT abs(-32.43) AS result FROM dual;
+
+SELECT ceil(-32.43) AS result FROM dual;
